@@ -1,0 +1,345 @@
+*************** export SWCH_USE_SLAVE_CALCU=0;  export SWCH_USE_SLAVE_COMMU=0;  export SWCH_USE_SLAVE_FUSION=0;  export SWCH_USE_META=0 *********************************
+Job <3387316> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:07] after query job cnodelist from db, use-time 0.24 secs.
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:07] cnodenum= 256, job-resource-list: 23808-24063[mpemap:0xf][spemap:0x00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:07] control node is: mn251.
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:07] sub control node number is 1, list: mn431.
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:08] after gather all tasks. use-time: 0.38 secs.
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:08] after put tasks info to db, use-time 0.07 secs.
+[3387316 ## mn251: 14393 ## 2022-02-05/11:50:08] start job ok, cnodenum=256, total use-time=0.84 secs!
+[3387316 ## vn023808: 10042 ## 2022-02-05/11:50:10] job's first task will run: /usr/bin/swrun -b 1 -T 1024 -s 8000 -c 0 -j 3387316 -F 0xFFFFFFFFFFFFFFFF -i ./IMB-MPI1 -iter 10000,5120,20 -npmin 4096 reduce -root_shift 0 -msglen len -mem 4.0 
+ benchmarks to run reduce 
+#------------------------------------------------------------
+#    Intel (R) MPI Benchmarks 4.1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Sat Feb  5 11:50:14 2022
+# Machine               : sw_64
+# System                : Linux
+# Release               : 4.4.15-g6fff048
+# Version               : #239 SMP Fri May 14 16:06:39 CST 2021
+# MPI Version           : 3.0
+# MPI Thread Environment: 
+
+# New default behavior from Version 3.2 on:
+
+# the number of iterations per message size is cut down 
+# dynamically when a certain run time (per message size sample) 
+# is expected to be exceeded. Time limit is defined by variable 
+# "SECS_PER_SAMPLE" (=> IMB_settings.h) 
+# or through the flag => -time 
+  
+
+
+# Calling sequence was: 
+
+# ./IMB-MPI1 -iter 10000 -npmin 4096 reduce -root_shift 0
+#            -msglen len -mem 4.0
+
+# Message lengths were user defined
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Reduce
+
+#----------------------------------------------------------------
+# Benchmarking Reduce 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+        16384        31478       215.61       215.66       215.64	Sat Feb  5 11:50:21 2022
+        65536        26724       319.21       319.44       319.40	Sat Feb  5 11:50:30 2022
+       262144        14919       730.63       730.86       730.76	Sat Feb  5 11:50:42 2022
+      1048576         5952      1738.91      1739.16      1739.04	Sat Feb  5 11:50:53 2022
+      4194304         1794      5524.89      5525.62      5525.13	Sat Feb  5 11:51:04 2022
+     16777216          498     20188.29     20191.90     20189.44	Sat Feb  5 11:51:15 2022
+     67108864          129     77313.87     77358.02     77320.84	Sat Feb  5 11:51:26 2022
+
+
+# All processes entering MPI_Finalize
+
+[3387316 ## mn251: 14393 ## 2022-02-05/11:51:45] job_finished. use-time: 96.828657 (secs)
+dispatching ...
+Job 3387316 has been finished.
+*************** export SWCH_USE_SLAVE_CALCU=1;  export SWCH_USE_SLAVE_COMMU=0;  export SWCH_USE_SLAVE_FUSION=0;  export SWCH_USE_META=0 *********************************
+Job <3387317> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:08] after query job cnodelist from db, use-time 0.17 secs.
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:08] cnodenum= 256, job-resource-list: 23808-24063[mpemap:0xf][spemap:0x00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:08] control node is: mn252.
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:08] sub control node number is 1, list: mn319.
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:09] after gather all tasks. use-time: 0.35 secs.
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:09] after put tasks info to db, use-time 0.07 secs.
+[3387317 ## mn252: 13361 ## 2022-02-05/11:52:09] start job ok, cnodenum=256, total use-time=0.76 secs!
+[3387317 ## vn023808: 10075 ## 2022-02-05/11:52:11] job's first task will run: /usr/bin/swrun -b 1 -T 1024 -s 8000 -c 0 -j 3387317 -F 0xFFFFFFFFFFFFFFFF -i ./IMB-MPI1 -iter 10000,5120,20 -npmin 4096 reduce -root_shift 0 -msglen len -mem 4.0 
+ benchmarks to run reduce 
+#------------------------------------------------------------
+#    Intel (R) MPI Benchmarks 4.1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Sat Feb  5 11:52:15 2022
+# Machine               : sw_64
+# System                : Linux
+# Release               : 4.4.15-g6fff048
+# Version               : #239 SMP Fri May 14 16:06:39 CST 2021
+# MPI Version           : 3.0
+# MPI Thread Environment: 
+
+# New default behavior from Version 3.2 on:
+
+# the number of iterations per message size is cut down 
+# dynamically when a certain run time (per message size sample) 
+# is expected to be exceeded. Time limit is defined by variable 
+# "SECS_PER_SAMPLE" (=> IMB_settings.h) 
+# or through the flag => -time 
+  
+
+
+# Calling sequence was: 
+
+# ./IMB-MPI1 -iter 10000 -npmin 4096 reduce -root_shift 0
+#            -msglen len -mem 4.0
+
+# Message lengths were user defined
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Reduce
+
+#----------------------------------------------------------------
+# Benchmarking Reduce 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+        16384        37623       219.07       219.14       219.12	Sat Feb  5 11:52:24 2022
+        65536        36787       290.40       290.52       290.51	Sat Feb  5 11:52:35 2022
+       262144        21162       405.35       405.48       405.46	Sat Feb  5 11:52:44 2022
+      1048576        15559       705.26       705.38       705.35	Sat Feb  5 11:52:55 2022
+      4194304         6215      1693.51      1693.63      1693.57	Sat Feb  5 11:53:07 2022
+     16777216         1787      5592.05      5592.92      5592.23	Sat Feb  5 11:53:18 2022
+     67108864          462     21699.61     21710.97     21700.88	Sat Feb  5 11:53:29 2022
+
+
+# All processes entering MPI_Finalize
+
+[3387317 ## mn252: 13361 ## 2022-02-05/11:53:44] job_finished. use-time: 95.325575 (secs)
+dispatching ...
+Job 3387317 has been finished.
+*************** export SWCH_USE_SLAVE_CALCU=1;  export SWCH_USE_SLAVE_COMMU=1;  export SWCH_USE_SLAVE_FUSION=0;  export SWCH_USE_META=0 *********************************
+Job <3387318> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] after query job cnodelist from db, use-time 0.27 secs.
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] cnodenum= 256, job-resource-list: 23808-24063[mpemap:0xf][spemap:0x00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] control node is: mn253.
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] sub control node number is 1, list: mn141.
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] after gather all tasks. use-time: 0.37 secs.
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] after put tasks info to db, use-time 0.28 secs.
+[3387318 ## mn253: 17487 ## 2022-02-05/11:54:08] start job ok, cnodenum=256, total use-time=1.05 secs!
+[3387318 ## vn023808: 10108 ## 2022-02-05/11:54:10] job's first task will run: /usr/bin/swrun -b 1 -T 1024 -s 8000 -c 0 -j 3387318 -F 0xFFFFFFFFFFFFFFFF -i ./IMB-MPI1 -iter 10000,5120,20 -npmin 4096 reduce -root_shift 0 -msglen len -mem 4.0 
+ benchmarks to run reduce 
+#------------------------------------------------------------
+#    Intel (R) MPI Benchmarks 4.1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Sat Feb  5 11:54:15 2022
+# Machine               : sw_64
+# System                : Linux
+# Release               : 4.4.15-g6fff048
+# Version               : #239 SMP Fri May 14 16:06:39 CST 2021
+# MPI Version           : 3.0
+# MPI Thread Environment: 
+
+# New default behavior from Version 3.2 on:
+
+# the number of iterations per message size is cut down 
+# dynamically when a certain run time (per message size sample) 
+# is expected to be exceeded. Time limit is defined by variable 
+# "SECS_PER_SAMPLE" (=> IMB_settings.h) 
+# or through the flag => -time 
+  
+
+
+# Calling sequence was: 
+
+# ./IMB-MPI1 -iter 10000 -npmin 4096 reduce -root_shift 0
+#            -msglen len -mem 4.0
+
+# Message lengths were user defined
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Reduce
+
+#----------------------------------------------------------------
+# Benchmarking Reduce 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+        16384        40089       218.42       218.47       218.45	Sat Feb  5 11:54:24 2022
+        65536        25967       289.58       289.68       289.66	Sat Feb  5 11:54:32 2022
+       262144        25258       407.65       407.74       407.72	Sat Feb  5 11:54:42 2022
+      1048576        15702       665.10       665.21       665.18	Sat Feb  5 11:54:53 2022
+      4194304         6930      1472.77      1472.86      1472.81	Sat Feb  5 11:55:05 2022
+     16777216         2120      4796.15      4796.91      4796.31	Sat Feb  5 11:55:16 2022
+     67108864          527     19094.69     19104.61     19095.77	Sat Feb  5 11:55:27 2022
+
+
+# All processes entering MPI_Finalize
+
+[3387318 ## mn253: 17487 ## 2022-02-05/11:55:45] job_finished. use-time: 96.855056 (secs)
+dispatching ...
+Job 3387318 has been finished.
+*************** export SWCH_USE_SLAVE_CALCU=1;  export SWCH_USE_SLAVE_COMMU=1;  export SWCH_USE_SLAVE_FUSION=1;  export SWCH_USE_META=0 *********************************
+Job <3387319> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] after query job cnodelist from db, use-time 0.17 secs.
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] cnodenum= 256, job-resource-list: 23808-24063[mpemap:0xf][spemap:0x00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] control node is: mn254.
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] sub control node number is 1, list: mn238.
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] after gather all tasks. use-time: 0.37 secs.
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] after put tasks info to db, use-time 0.05 secs.
+[3387319 ## mn254: 24248 ## 2022-02-05/11:56:09] start job ok, cnodenum=256, total use-time=0.74 secs!
+[3387319 ## vn023808: 10159 ## 2022-02-05/11:56:11] job's first task will run: /usr/bin/swrun -b 1 -T 1024 -s 8000 -c 0 -j 3387319 -F 0xFFFFFFFFFFFFFFFF -i ./IMB-MPI1 -iter 10000,5120,20 -npmin 4096 reduce -root_shift 0 -msglen len -mem 4.0 
+ benchmarks to run reduce 
+#------------------------------------------------------------
+#    Intel (R) MPI Benchmarks 4.1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Sat Feb  5 11:56:15 2022
+# Machine               : sw_64
+# System                : Linux
+# Release               : 4.4.15-g6fff048
+# Version               : #239 SMP Fri May 14 16:06:39 CST 2021
+# MPI Version           : 3.0
+# MPI Thread Environment: 
+
+# New default behavior from Version 3.2 on:
+
+# the number of iterations per message size is cut down 
+# dynamically when a certain run time (per message size sample) 
+# is expected to be exceeded. Time limit is defined by variable 
+# "SECS_PER_SAMPLE" (=> IMB_settings.h) 
+# or through the flag => -time 
+  
+
+
+# Calling sequence was: 
+
+# ./IMB-MPI1 -iter 10000 -npmin 4096 reduce -root_shift 0
+#            -msglen len -mem 4.0
+
+# Message lengths were user defined
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Reduce
+
+#----------------------------------------------------------------
+# Benchmarking Reduce 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+        16384        38023       216.48       216.54       216.52	Sat Feb  5 11:56:24 2022
+        65536        38023       255.72       255.80       255.78	Sat Feb  5 11:56:34 2022
+       262144        29976       355.46       355.53       355.51	Sat Feb  5 11:56:45 2022
+      1048576        18151       591.37       591.49       591.46	Sat Feb  5 11:56:56 2022
+      4194304         7545      1280.59      1280.69      1280.64	Sat Feb  5 11:57:07 2022
+     16777216         2413      4128.19      4128.85      4128.34	Sat Feb  5 11:57:18 2022
+     67108864          608     16593.94     16602.61     16594.92	Sat Feb  5 11:57:29 2022
+
+
+# All processes entering MPI_Finalize
+
+[3387319 ## mn254: 24248 ## 2022-02-05/11:57:45] job_finished. use-time: 95.353661 (secs)
+dispatching ...
+Job 3387319 has been finished.
+*************** export SWCH_USE_SLAVE_CALCU=1;  export SWCH_USE_SLAVE_COMMU=1;  export SWCH_USE_SLAVE_FUSION=1;  export SWCH_USE_META=1 *********************************
+Job <3387320> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] after query job cnodelist from db, use-time 0.16 secs.
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] cnodenum= 256, job-resource-list: 23808-24063[mpemap:0xf][spemap:0x00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] control node is: mn255.
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] sub control node number is 1, list: mn125.
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] after gather all tasks. use-time: 0.37 secs.
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] after put tasks info to db, use-time 0.07 secs.
+[3387320 ## mn255: 19520 ## 2022-02-05/11:58:08] start job ok, cnodenum=256, total use-time=0.75 secs!
+[3387320 ## vn023808: 10192 ## 2022-02-05/11:58:10] job's first task will run: /usr/bin/swrun -b 1 -T 1024 -s 8000 -c 0 -j 3387320 -F 0xFFFFFFFFFFFFFFFF -i ./IMB-MPI1 -iter 10000,5120,20 -npmin 4096 reduce -root_shift 0 -msglen len -mem 4.0 
+ benchmarks to run reduce 
+#------------------------------------------------------------
+#    Intel (R) MPI Benchmarks 4.1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Sat Feb  5 11:58:15 2022
+# Machine               : sw_64
+# System                : Linux
+# Release               : 4.4.15-g6fff048
+# Version               : #239 SMP Fri May 14 16:06:39 CST 2021
+# MPI Version           : 3.0
+# MPI Thread Environment: 
+
+# New default behavior from Version 3.2 on:
+
+# the number of iterations per message size is cut down 
+# dynamically when a certain run time (per message size sample) 
+# is expected to be exceeded. Time limit is defined by variable 
+# "SECS_PER_SAMPLE" (=> IMB_settings.h) 
+# or through the flag => -time 
+  
+
+
+# Calling sequence was: 
+
+# ./IMB-MPI1 -iter 10000 -npmin 4096 reduce -root_shift 0
+#            -msglen len -mem 4.0
+
+# Message lengths were user defined
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Reduce
+
+#----------------------------------------------------------------
+# Benchmarking Reduce 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+        16384        31800       239.36       239.44       239.42	Sat Feb  5 11:58:23 2022
+        65536        31800       290.79       290.88       290.86	Sat Feb  5 11:58:32 2022
+       262144        27334       391.11       391.21       391.19	Sat Feb  5 11:58:43 2022
+      1048576        17104       592.59       592.70       592.67	Sat Feb  5 11:58:54 2022
+      4194304         7662      1237.03      1237.13      1237.09	Sat Feb  5 11:59:04 2022
+     16777216         2654      3785.83      3786.22      3785.93	Sat Feb  5 11:59:15 2022
+     67108864          675     14859.82     14864.27     14860.32	Sat Feb  5 11:59:27 2022
+
+
+# All processes entering MPI_Finalize
+
+[3387320 ## mn255: 19520 ## 2022-02-05/11:59:45] job_finished. use-time: 96.846190 (secs)
+dispatching ...
+Job 3387320 has been finished.

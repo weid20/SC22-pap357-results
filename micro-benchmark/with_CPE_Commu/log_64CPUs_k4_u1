@@ -1,0 +1,64 @@
+Job <3389242> has been submitted to queue <q_test_20220207>
+waiting for dispatch ...
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	       1 KB, max = 	  121.08 us, min = 	    3.70 us, ave = 	   15.75 us
+Gather_positive(shuffle):	 len = 	       1 KB, max = 	  130.97 us, min = 	    3.67 us, ave = 	   24.33 us
+Gather_negative:		 len = 	       1 KB, max = 	  125.09 us, min = 	    6.12 us, ave = 	   22.22 us
+Allgather_positive:		 len = 	       1 KB, max = 	  174.60 us, min = 	  168.10 us, ave = 	  171.61 us
+Allgather_negative:		 len = 	       1 KB, max = 	  172.78 us, min = 	  168.51 us, ave = 	  171.18 us
+Allgather_negative(Shuffle):	 len = 	       1 KB, max = 	  184.76 us, min = 	  181.00 us, ave = 	  182.79 us
+
+
+
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	       4 KB, max = 	  157.51 us, min = 	    9.38 us, ave = 	   22.97 us
+Gather_positive(shuffle):	 len = 	       4 KB, max = 	  174.94 us, min = 	   25.98 us, ave = 	   41.80 us
+Gather_negative:		 len = 	       4 KB, max = 	  184.38 us, min = 	   16.14 us, ave = 	   34.34 us
+Allgather_positive:		 len = 	       4 KB, max = 	  303.35 us, min = 	  289.13 us, ave = 	  295.44 us
+Allgather_negative:		 len = 	       4 KB, max = 	  245.17 us, min = 	  239.61 us, ave = 	  241.99 us
+Allgather_negative(Shuffle):	 len = 	       4 KB, max = 	  281.29 us, min = 	  275.17 us, ave = 	  278.89 us
+
+
+
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	      16 KB, max = 	  280.23 us, min = 	   11.53 us, ave = 	   29.02 us
+Gather_positive(shuffle):	 len = 	      16 KB, max = 	  302.21 us, min = 	   31.95 us, ave = 	   52.26 us
+Gather_negative:		 len = 	      16 KB, max = 	  389.69 us, min = 	   18.70 us, ave = 	   45.43 us
+Allgather_positive:		 len = 	      16 KB, max = 	  818.43 us, min = 	  787.97 us, ave = 	  802.42 us
+Allgather_negative:		 len = 	      16 KB, max = 	  503.35 us, min = 	  473.50 us, ave = 	  491.37 us
+Allgather_negative(Shuffle):	 len = 	      16 KB, max = 	  497.26 us, min = 	  480.15 us, ave = 	  483.49 us
+
+
+
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	      64 KB, max = 	  799.06 us, min = 	   14.74 us, ave = 	   48.16 us
+Gather_positive(shuffle):	 len = 	      64 KB, max = 	  858.45 us, min = 	   44.28 us, ave = 	   86.63 us
+Gather_negative:		 len = 	      64 KB, max = 	 1288.90 us, min = 	   24.49 us, ave = 	   89.43 us
+Allgather_positive:		 len = 	      64 KB, max = 	 2760.26 us, min = 	 2709.12 us, ave = 	 2738.95 us
+Allgather_negative:		 len = 	      64 KB, max = 	 1508.89 us, min = 	 1454.76 us, ave = 	 1482.77 us
+Allgather_negative(Shuffle):	 len = 	      64 KB, max = 	 1575.24 us, min = 	 1523.06 us, ave = 	 1544.41 us
+
+
+
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	     256 KB, max = 	 2664.78 us, min = 	   23.41 us, ave = 	  109.94 us
+Gather_positive(shuffle):	 len = 	     256 KB, max = 	 2772.41 us, min = 	  104.54 us, ave = 	  223.75 us
+Gather_negative:		 len = 	     256 KB, max = 	 4849.16 us, min = 	   50.36 us, ave = 	  278.58 us
+Allgather_positive:		 len = 	     256 KB, max = 	10782.63 us, min = 	10573.50 us, ave = 	10674.74 us
+Allgather_negative:		 len = 	     256 KB, max = 	 6308.57 us, min = 	 6236.07 us, ave = 	 6275.19 us
+Allgather_negative(Shuffle):	 len = 	     256 KB, max = 	 6564.38 us, min = 	 6440.85 us, ave = 	 6510.00 us
+
+
+
+-------------------- comm_size = 256 ----------------------
+Gather_positive:		 len = 	    1024 KB, max = 	10238.54 us, min = 	   57.60 us, ave = 	  354.60 us
+Gather_positive(shuffle):	 len = 	    1024 KB, max = 	10636.76 us, min = 	  303.67 us, ave = 	  714.99 us
+Gather_negative:		 len = 	    1024 KB, max = 	19126.80 us, min = 	  168.07 us, ave = 	 1053.65 us
+Allgather_positive:		 len = 	    1024 KB, max = 	42227.86 us, min = 	41222.20 us, ave = 	41747.95 us
+Allgather_negative:		 len = 	    1024 KB, max = 	26024.85 us, min = 	25912.86 us, ave = 	25962.48 us
+Allgather_negative(Shuffle):	 len = 	    1024 KB, max = 	27032.38 us, min = 	26711.89 us, ave = 	26878.19 us
+
+
+
+dispatching ...
+Job 3389242 has been finished.

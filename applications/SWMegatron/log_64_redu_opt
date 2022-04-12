@@ -1,0 +1,376 @@
+using cross
+Using script examples/pretrain_gpt_sw_allreduce.sh
+Using random 1 nodes
+Job <3384323> has been submitted to queue <q_formal_cesm>
+waiting for dispatch ...
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:05] after query job cnodelist from db, use-time 0.28 secs.
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:05] cnodenum= 64, job-resource-list: 25728-25791[mpemap:0x1][spemap:0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:05] control node is: mn291.
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:05] sub control node number is 1, list: mn281.
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:06] after gather all tasks. use-time: 0.18 secs.
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:06] after put tasks info to db, use-time 0.05 secs.
+[3384323 ## mn291: 4551 ## 2022-01-30/05:32:06] start job ok, cnodenum=64, total use-time=0.66 secs!
+vn025728: no optimizer found. set to paro
+vn025728: using world size: 64, data-parallel-size: 64, tensor-model-parallel size: 1, pipeline-model-parallel size: 1 
+vn025728: using torch.float32 for parameters ...
+vn025728: WARNING: overriding default arguments for tokenizer_type:GPT2BPETokenizer                        with tokenizer_type:BertWordPieceLowerCase
+vn025728: ------------------------ arguments ------------------------
+vn025728:   adam_beta1 ...................................... 0.90000000000000002
+vn025728:   adam_beta2 ...................................... 0.999
+vn025728:   adam_eps ........................................ 1e-08
+vn025728:   adlr_autoresume ................................. False
+vn025728:   adlr_autoresume_interval ........................ 1000
+vn025728:   apply_query_key_layer_scaling ................... True
+vn025728:   apply_residual_connection_post_layernorm ........ False
+vn025728:   attention_dropout ............................... 0.10000000000000001
+vn025728:   attention_softmax_in_fp32 ....................... False
+vn025728:   balance_loss_weight ............................. 1
+vn025728:   balance_strategy ................................ swipe
+vn025728:   bert_load ....................................... None
+vn025728:   bf16 ............................................ False
+vn025728:   bias_dropout_fusion ............................. False
+vn025728:   bias_gelu_fusion ................................ False
+vn025728:   block_data_path ................................. None
+vn025728:   checkpoint_activations .......................... False
+vn025728:   checkpoint_num_layers ........................... 1
+vn025728:   clip_grad ....................................... 1.0
+vn025728:   concat_two ...................................... False
+vn025728:   consumed_train_samples .......................... 0
+vn025728:   consumed_valid_samples .......................... 0
+vn025728:   crazy ........................................... False
+vn025728:   crazy_dp ........................................ -1
+vn025728:   data_impl ....................................... mmap
+vn025728:   data_parallel_size .............................. 64
+vn025728:   data_path ....................................... None
+vn025728:   DDP_impl ........................................ local
+vn025728:   distribute_checkpointed_activations ............. False
+vn025728:   distributed_backend ............................. mpi
+vn025728:   eod_mask_loss ................................... True
+vn025728:   eval_interval ................................... 1000
+vn025728:   eval_iters ...................................... 10
+vn025728:   exit_duration_in_mins ........................... None
+vn025728:   exit_interval ................................... None
+vn025728:   faiss_use_gpu ................................... False
+vn025728:   finetune ........................................ False
+vn025728:   fmoefy .......................................... False
+vn025728:   fp16 ............................................ False
+vn025728:   fp32_allreduce .................................. False
+vn025728:   fp32_dynamic_loss_scale ......................... False
+vn025728:   fp32_layernorm .................................. False
+vn025728:   fp32_residual_connection ........................ False
+vn025728:   fp32_static_loss_scale .......................... 1.0
+vn025728:   generate_interval ............................... 2000
+vn025728:   generate_prompt_length .......................... 32
+vn025728:   generate_steps .................................. 128
+vn025728:   global_batch_size ............................... 64
+vn025728:   half_lm_cross_entropy ........................... False
+vn025728:   hidden_dropout .................................. 0.10000000000000001
+vn025728:   hidden_hidden_size .............................. 4096
+vn025728:   hidden_size ..................................... 768
+vn025728:   hysteresis ...................................... 2
+vn025728:   ict_head_size ................................... None
+vn025728:   ict_load ........................................ None
+vn025728:   indexer_batch_size .............................. 128
+vn025728:   indexer_log_interval ............................ 1000
+vn025728:   init_method_std ................................. 0.01
+vn025728:   initial_loss_scale .............................. 4294967296
+vn025728:   layernorm_epsilon ............................... 1.0000000000000001e-05
+vn025728:   lazy_mpu_init ................................... None
+vn025728:   load ............................................ ./ckpt/m6-220130-053204
+vn025728:   local_rank ...................................... None
+vn025728:   log_interval .................................... 1
+vn025728:   loss_scale ...................................... None
+vn025728:   loss_scale_window ............................... 1000
+vn025728:   lr .............................................. 2.0000000000000002e-05
+vn025728:   lr_decay_iters .................................. 100000
+vn025728:   lr_decay_samples ................................ None
+vn025728:   lr_decay_style .................................. linear
+vn025728:   lr_warmup_fraction .............................. 0.029999999999999999
+vn025728:   lr_warmup_iters ................................. 0
+vn025728:   lr_warmup_samples ............................... 0
+vn025728:   m6_img_feature_dim .............................. 2048
+vn025728:   m6_img_file_list ................................ None
+vn025728:   m6_patch_nums ................................... 16
+vn025728:   m6_txt_file_list ................................ ./dataset/all_imgtxttoken_files.txt
+vn025728:   make_vocab_size_divisible_by .................... 512
+vn025728:   mask_prob ....................................... 0.14999999999999999
+vn025728:   max_position_embeddings ......................... 1152
+vn025728:   merge_file ...................................... None
+vn025728:   micro_batch_size ................................ 1
+vn025728:   min_loss_scale .................................. 1.0
+vn025728:   min_lr .......................................... 4.9999999999999998e-07
+vn025728:   mmap_warmup ..................................... False
+vn025728:   moe_size ........................................ 256
+vn025728:   no_load_optim ................................... False
+vn025728:   no_load_rng ..................................... False
+vn025728:   no_mid_align .................................... False
+vn025728:   no_save_optim ................................... False
+vn025728:   no_save_rng ..................................... False
+vn025728:   num_attention_heads ............................. 16
+vn025728:   num_exp
+vn025728: erts ..................................... 1
+vn025728:   num_layers ...................................... 6
+vn025728:   num_workers ..................................... 0
+vn025728:   onnx_safe ....................................... None
+vn025728:   openai_gelu ..................................... False
+vn025728:   optimizer_type .................................. none
+vn025728:   override_lr_scheduler ........................... True
+vn025728:   pad_mask_loss ................................... True
+vn025728:   params_dtype .................................... torch.float32
+vn025728:   pipeline_model_parallel_size .................... 1
+vn025728:   print_ops ....................................... False
+vn025728:   print_ops_freq .................................. -1
+vn025728:   prompt_length ................................... 512
+vn025728:   query_in_block_prob ............................. 0.10000000000000001
+vn025728:   rampup_batch_size ............................... None
+vn025728:   rank ............................................ 0
+vn025728:   report_topk_accuracies .......................... []
+vn025728:   reset_attention_mask ............................ False
+vn025728:   reset_position_ids .............................. False
+vn025728:   save ............................................ ./ckpt/m6-220130-053204
+vn025728:   save_interval ................................... 200
+vn025728:   scaled_masked_softmax_fusion .................... False
+vn025728:   scaled_upper_triang_masked_softmax_fusion ....... False
+vn025728:   seed ............................................ 1234
+vn025728:   seq_length ...................................... 1152
+vn025728:   share_gate ...................................... False
+vn025728:   short_seq_prob .................................. 0.10000000000000001
+vn025728:   sn_size ......................................... 256
+vn025728:   split ........................................... 990,9,1
+vn025728:   sw_align ........................................ 192
+vn025728:   temperature ..................................... 0.90000000000000002
+vn025728:   tensor_model_parallel_size ...................... 1
+vn025728:   tensorboard_dir ................................. None
+vn025728:   titles_data_path ................................ None
+vn025728:   tokenizer_type .................................. BertWordPieceLowerCase
+vn025728:   top_k ........................................... 2
+vn025728:   train_iters ..................................... 500000
+vn025728:   train_samples ................................... None
+vn025728:   use_checkpoint_lr_scheduler ..................... False
+vn025728:   use_cpu_initialization .......................... True
+vn025728:   use_one_sent_docs ............................... False
+vn025728:   vocab_file ...................................... ./dataset/merged_vocab.txt
+vn025728:   weight_decay .................................... 0.01
+vn025728:   world_size ...................................... 64
+vn025728:   zero_gate ....................................... False
+vn025728: -------------------- end of arguments ---------------------
+vn025728: setting number of micro-batches to constant 1
+vn025728: > building BertWordPieceLowerCase tokenizer ...
+vn025728:  > padded vocab (size: 209221) with 187 dummy tokens (new size: 209408)
+vn025728: > initializing torch distributed ...
+vn025728: > initializing tensor model parallel with size 1
+vn025728: > initializing pipeline model parallel with size 1
+vn025728: > Megatron distributed init time 0.030365943908691406 s
+vn025728: > setting random seeds to 1234 ...
+vn025728: time to initialize megatron (seconds): 27.280
+vn025728: [after megatron is initialized] datetime: 2022-01-30 05:33:15 
+vn025728: building GPT model ...
+vn025728:  > number of parameters with row size 256: 2.042388e+08
+vn025791: time (ms) | build model: 790.52
+vn025728: > learning rate decay style: linear
+vn025728: > building train, validation, and test datasets ...
+vn025728:  > datasets target sizes (minimum size):
+vn025728:     train:      32000000
+vn025728:     validation: 320640
+vn025728:     test:       640
+vn025728: > building train, validation, and test datasets for GPT ...
+vn025728:     train:
+vn025728:       file list indices in [0, 64) total of 64 files
+vn025728:     valid:
+vn025728:       file list indices in [64, 65) total of 1 files
+vn025728:     test:
+vn025728:       file list indices in [65, 65) total of 0 files
+vn025791: Loading checkpoint from ./ckpt/m6-220130-053204
+vn025791: WARNING: could not find the metadata file ./ckpt/m6-220130-053204/latest_checkpointed_iteration.txt 
+vn025791:     will not load any checkpoints and will start from random
+vn025791: time (ms) | load checkpoint: 3.53
+vn025728: > finished creating GPT (SWLoader) datasets ...
+vn025728: [after dataloaders are built] datetime: 2022-01-30 05:33:16 
+vn025728: [after model, optimizer, and learning rate scheduler are built] datetime: 2022-01-30 05:33:16 
+vn025728: done with setups ...
+vn025728: training ...
+vn025791: time (ms) | model and optimizer: 806.93 | train/valid/test data iterators: 801.67
+vn025728: [before the start of training step] datetime: 2022-01-30 05:33:16 
+vn025728: forwarding 0. Mem: 0.761 GB
+vn025728: backwarding 0. Mem: 3.925 GB
+vn025728: optimizing. Mem: 1.5212526172399521 GB
+vn025728: memory report func mocked
+vn025791:  iteration        1/  500000 | consumed samples:           64 | elapsed time per iteration (ms): 1766.7 | total FLOPS: 0.000000e+00 | learning rate: 6.667E-09 | global batch size:    64 | lm loss: 1.230507E+01 | txt loss: 1.230508E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 3.925 GB |
+vn025791: time (ms) | forward-compute: 436.38 | backward-compute: 397.95 | backward-params-all-reduce: 657.56 | backward-embedding-all-reduce: 0.08 | optimizer: 265.55 | optimizer-compute: 191.75 | batch-generator: 41.41
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        2/  500000 | consumed samples:          128 | elapsed time per iteration (ms): 1715.2 | total FLOPS: 6.126342e+13 | learning rate: 1.333E-08 | global batch size:    64 | lm loss: 1.231212E+01 | txt loss: 1.231212E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.26 | backward-compute: 384.48 | backward-params-all-reduce: 640.27 | backward-embedding-all-reduce: 0.09 | optimizer: 241.58 | optimizer-compute: 168.21 | batch-generator: 40.21
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        3/  500000 | consumed samples:          192 | elapsed time per iteration (ms): 1733.7 | total FLOPS: 6.060838e+13 | learning rate: 2.000E-08 | global batch size:    64 | lm loss: 1.231087E+01 | txt loss: 1.231087E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.58 | backward-compute: 383.80 | backward-params-all-reduce: 658.45 | backward-embedding-all-reduce: 0.08 | optimizer: 241.66 | optimizer-compute: 167.97 | batch-generator: 40.57
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        4/  500000 | consumed samples:          256 | elapsed time per iteration (ms): 1728.4 | total FLOPS: 6.079593e+13 | learning rate: 2.667E-08 | global batch size:    64 | lm loss: 1.231399E+01 | txt loss: 1.231398E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.07 | backward-compute: 383.08 | backward-params-all-reduce: 654.50 | backward-embedding-all-reduce: 0.08 | optimizer: 241.94 | optimizer-compute: 168.58 | batch-generator: 40.16
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        5/  500000 | consumed samples:          320 | elapsed time per iteration (ms): 1726.5 | total FLOPS: 6.086300e+13 | learning rate: 3.333E-08 | global batch size:    64 | lm loss: 1.230707E+01 | txt loss: 1.230706E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.99 | backward-compute: 383.76 | backward-params-all-reduce: 649.95 | backward-embedding-all-reduce: 0.09 | optimizer: 242.57 | optimizer-compute: 168.60 | batch-generator: 40.62
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        6/  500000 | consumed samples:          384 | elapsed time per iteration (ms): 1733.0 | total FLOPS: 6.063290e+13 | learning rate: 4.000E-08 | global batch size:    64 | lm loss: 1.230575E+01 | txt loss: 1.230574E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.62 | backward-compute: 383.72 | backward-params-all-reduce: 658.79 | backward-embedding-all-reduce: 0.09 | optimizer: 242.12 | optimizer-compute: 168.64 | batch-generator: 48.83
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        7/  500000 | consumed samples:          448 | elapsed time per iteration (ms): 1719.7 | total FLOPS: 6.110435e+13 | learning rate: 4.667E-08 | global batch size:    64 | lm loss: 1.230698E+01 | txt loss: 1.230698E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.55 | backward-compute: 384.62 | backward-params-all-reduce: 643.69 | backward-embedding-all-reduce: 0.09 | optimizer: 242.53 | optimizer-compute: 168.53 | batch-generator: 41.20
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        8/  500000 | consumed samples:          512 | elapsed time per iteration (ms): 1729.1 | total FLOPS: 6.077123e+13 | learning rate: 5.333E-08 | global batch size:    64 | lm loss: 1.230452E+01 | txt loss: 1.230451E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.45 | backward-compute: 384.48 | backward-params-all-reduce: 653.38 | backward-embedding-all-reduce: 0.08 | optimizer: 243.06 | optimizer-compute: 169.43 | batch-generator: 39.46
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration        9/  500000 | consumed samples:          576 | elapsed time per iteration (ms): 1726.9 | total FLOPS: 6.084806e+13 | learning rate: 6.000E-08 | global batch size:    64 | lm loss: 1.230632E+01 | txt loss: 1.230632E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 436.82 | backward-compute: 384.44 | backward-params-all-reduce: 653.11 | backward-embedding-all-reduce: 0.08 | optimizer: 242.25 | optimizer-compute: 168.37 | batch-generator: 39.76
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       10/  500000 | consumed samples:          640 | elapsed time per iteration (ms): 1721.7 | total FLOPS: 6.103152e+13 | learning rate: 6.667E-08 | global batch size:    64 | lm loss: 1.229929E+01 | txt loss: 1.229928E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.20 | backward-compute: 383.52 | backward-params-all-reduce: 648.05 | backward-embedding-all-reduce: 0.08 | optimizer: 242.23 | optimizer-compute: 168.64 | batch-generator: 40.39
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       11/  500000 | consumed samples:          704 | elapsed time per iteration (ms): 1733.6 | total FLOPS: 6.061393e+13 | learning rate: 7.333E-08 | global batch size:    64 | lm loss: 1.229685E+01 | txt loss: 1.229685E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.64 | backward-compute: 384.32 | backward-params-all-reduce: 659.59 | backward-embedding-all-reduce: 0.08 | optimizer: 241.68 | optimizer-compute: 167.81 | batch-generator: 40.35
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       12/  500000 | consumed samples:          768 | elapsed time per iteration (ms): 1739.0 | total FLOPS: 6.042435e+13 | learning rate: 8.000E-08 | global batch size:    64 | lm loss: 1.229698E+01 | txt loss: 1.229698E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.69 | backward-compute: 384.26 | backward-params-all-reduce: 662.24 | backward-embedding-all-reduce: 0.09 | optimizer: 243.08 | optimizer-compute: 169.22 | batch-generator: 42.00
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       13/  500000 | consumed samples:          832 | elapsed time per iteration (ms): 1733.9 | total FLOPS: 6.060322e+13 | learning rate: 8.667E-08 | global batch size:    64 | lm loss: 1.229544E+01 | txt loss: 1.229544E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.07 | backward-compute: 384.76 | backward-params-all-reduce: 659.62 | backward-embedding-all-reduce: 0.08 | optimizer: 242.01 | optimizer-compute: 168.27 | batch-generator: 46.85
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       14/  500000 | consumed samples:          896 | elapsed time per iteration (ms): 1726.8 | total FLOPS: 6.085307e+13 | learning rate: 9.333E-08 | global batch size:    64 | lm loss: 1.229429E+01 | txt loss: 1.229429E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.33 | backward-compute: 384.49 | backward-params-all-reduce: 652.02 | backward-embedding-all-reduce: 0.08 | optimizer: 242.24 | optimizer-compute: 168.56 | batch-generator: 40.56
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       15/  500000 | consumed samples:          960 | elapsed time per iteration (ms): 1729.9 | total FLOPS: 6.074316e+13 | learning rate: 1.000E-07 | global batch size:    64 | lm loss: 1.228615E+01 | txt loss: 1.228614E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.90 | backward-compute: 384.11 | backward-params-all-reduce: 655.06 | backward-embedding-all-reduce: 0.09 | optimizer: 242.55 | optimizer-compute: 168.84 | batch-generator: 40.75
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       16/  500000 | consumed samples:         1024 | elapsed time per iteration (ms): 1740.2 | total FLOPS: 6.038252e+13 | learning rate: 1.067E-07 | global batch size:    64 | lm loss: 1.228905E+01 | txt loss: 1.228905E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025791: time (ms) | forward-compute: 437.93 | backward-compute: 384.69 | backward-params-all-reduce: 663.90 | backward-embedding-all-reduce: 0.08 | optimizer: 242.96 | optimizer-compute: 169.26 | batch-generator: 41.17
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       17/  500000 | consumed samples:         1088 | elapsed time per iteration (ms): 1793.0 | total FLOPS: 5.860440e+13 | learning rate: 1.133E-07 | global batch size:    64 | lm loss: 1.227961E+01 | txt loss: 1.227961E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 436.17 | backward-compute: 383.87 | backward-params-all-reduce: 720.13 | backward-embedding-all-reduce: 0.08 | optimizer: 242.37 | optimizer-compute: 168.23 | batch-generator: 39.54
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       18/  500000 | consumed samples:         1152 | elapsed time per iteration (ms): 1729.6 | total FLOPS: 6.075293e+13 | learning rate: 1.200E-07 | global batch size:    64 | lm loss: 1.227911E+01 | txt loss: 1.227910E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.76 | backward-compute: 383.94 | backward-params-all-reduce: 653.36 | backward-embedding-all-reduce: 0.09 | optimizer: 242.81 | optimizer-compute: 168.96 | batch-generator: 40.97
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       19/  500000 | consumed samples:         1216 | elapsed time per iteration (ms): 1772.0 | total FLOPS: 5.929919e+13 | learning rate: 1.267E-07 | global batch size:    64 | lm loss: 1.227278E+01 | txt loss: 1.227278E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.34 | backward-compute: 384.56 | backward-params-all-reduce: 696.64 | backward-embedding-all-reduce: 0.08 | optimizer: 243.06 | optimizer-compute: 168.87 | batch-generator: 40.60
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       20/  500000 | consumed samples:         1280 | elapsed time per iteration (ms): 1739.0 | total FLOPS: 6.042631e+13 | learning rate: 1.333E-07 | global batch size:    64 | lm loss: 1.227099E+01 | txt loss: 1.227100E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.78 | backward-compute: 383.99 | backward-params-all-reduce: 663.87 | backward-embedding-all-reduce: 0.08 | optimizer: 242.38 | optimizer-compute: 168.60 | batch-generator: 41.74
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       21/  500000 | consumed samples:         1344 | elapsed time per iteration (ms): 1727.6 | total FLOPS: 6.082544e+13 | learning rate: 1.400E-07 | global batch size:    64 | lm loss: 1.227140E+01 | txt loss: 1.227140E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.53 | backward-compute: 383.82 | backward-params-all-reduce: 651.78 | backward-embedding-all-reduce: 0.09 | optimizer: 242.16 | optimizer-compute: 168.56 | batch-generator: 40.82
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       22/  500000 | consumed samples:         1408 | elapsed time per iteration (ms): 1720.2 | total FLOPS: 6.108452e+13 | learning rate: 1.467E-07 | global batch size:    64 | lm loss: 1.225757E+01 | txt loss: 1.225756E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025791: time (ms) | forward-compute: 439.30 | backward-compute: 384.46 | backward-params-all-reduce: 643.06 | backward-embedding-all-reduce: 0.08 | optimizer: 242.69 | optimizer-compute: 168.78 | batch-generator: 42.09
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       23/  500000 | consumed samples:         1472 | elapsed time per iteration (ms): 1738.5 | total FLOPS: 6.044207e+13 | learning rate: 1.533E-07 | global batch size:    64 | lm loss: 1.225496E+01 | txt loss: 1.225496E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.19 | backward-compute: 384.44 | backward-params-all-reduce: 663.34 | backward-embedding-all-reduce: 0.09 | optimizer: 242.24 | optimizer-compute: 168.80 | batch-generator: 41.00
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       24/  500000 | consumed samples:         1536 | elapsed time per iteration (ms): 1722.3 | total FLOPS: 6.101216e+13 | learning rate: 1.600E-07 | global batch size:    64 | lm loss: 1.225088E+01 | txt loss: 1.225088E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.84 | backward-compute: 384.32 | backward-params-all-reduce: 646.99 | backward-embedding-all-reduce: 0.08 | optimizer: 242.35 | optimizer-compute: 168.94 | batch-generator: 41.07
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       25/  500000 | consumed samples:         1600 | elapsed time per iteration (ms): 1725.9 | total FLOPS: 6.088475e+13 | learning rate: 1.667E-07 | global batch size:    64 | lm loss: 1.225063E+01 | txt loss: 1.225062E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.17 | backward-compute: 384.52 | backward-params-all-reduce: 649.15 | backward-embedding-all-reduce: 0.08 | optimizer: 242.65 | optimizer-compute: 168.96 | batch-generator: 41.63
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       26/  500000 | consumed samples:         1664 | elapsed time per iteration (ms): 1721.7 | total FLOPS: 6.103152e+13 | learning rate: 1.733E-07 | global batch size:    64 | lm loss: 1.224218E+01 | txt loss: 1.224218E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.24 | backward-compute: 384.45 | backward-params-all-reduce: 643.86 | backward-embedding-all-reduce: 0.08 | optimizer: 243.29 | optimizer-compute: 169.35 | batch-generator: 48.74
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       27/  500000 | consumed samples:         1728 | elapsed time per iteration (ms): 1743.1 | total FLOPS: 6.028166e+13 | learning rate: 1.800E-07 | global batch size:    64 | lm loss: 1.223405E+01 | txt loss: 1.223405E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.45 | backward-compute: 384.55 | backward-params-all-reduce: 668.32 | backward-embedding-all-reduce: 0.08 | optimizer: 242.54 | optimizer-compute: 168.82 | batch-generator: 47.64
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       28/  500000 | consumed samples:         1792 | elapsed time per iteration (ms): 1719.1 | total FLOPS: 6.112484e+13 | learning rate: 1.867E-07 | global batch size:    64 | lm loss: 1.222958E+01 | txt loss: 1.222958E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.71 | backward-compute: 384.39 | backward-params-all-reduce: 641.32 | backward-embedding-all-reduce: 0.09 | optimizer: 242.83 | optimizer-compute: 169.11 | batch-generator: 42.60
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       29/  500000 | consumed samples:         1856 | elapsed time per iteration (ms): 1719.0 | total FLOPS: 6.112863e+13 | learning rate: 1.933E-07 | global batch size:    64 | lm loss: 1.222947E+01 | txt loss: 1.222947E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.13 | backward-compute: 384.57 | backward-params-all-reduce: 644.32 | backward-embedding-all-reduce: 0.09 | optimizer: 242.63 | optimizer-compute: 169.13 | batch-generator: 40.54
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       30/  500000 | consumed samples:         1920 | elapsed time per iteration (ms): 1720.3 | total FLOPS: 6.108340e+13 | learning rate: 2.000E-07 | global batch size:    64 | lm loss: 1.221615E+01 | txt loss: 1.221615E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 438.70 | backward-compute: 384.46 | backward-params-all-reduce: 643.43 | backward-embedding-all-reduce: 0.09 | optimizer: 242.86 | optimizer-compute: 169.15 | batch-generator: 41.04
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       31/  500000 | consumed samples:         1984 | elapsed time per iteration (ms): 1734.5 | total FLOPS: 6.058234e+13 | learning rate: 2.067E-07 | global batch size:    64 | lm loss: 1.220781E+01 | txt loss: 1.220781E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 439.99 | backward-compute: 383.93 | backward-params-all-reduce: 657.26 | backward-embedding-all-reduce: 0.08 | optimizer: 242.85 | optimizer-compute: 169.08 | batch-generator: 42.98
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       32/  500000 | consumed samples:         2048 | elapsed time per iteration (ms): 1726.3 | total FLOPS: 6.086806e+13 | learning rate: 2.133E-07 | global batch size:    64 | lm loss: 1.220310E+01 | txt loss: 1.220310E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.42 | backward-compute: 384.28 | backward-params-all-reduce: 651.18 | backward-embedding-all-reduce: 0.08 | optimizer: 242.68 | optimizer-compute: 169.13 | batch-generator: 40.58
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       33/  500000 | consumed samples:         2112 | elapsed time per iteration (ms): 1735.0 | total FLOPS: 6.056597e+13 | learning rate: 2.200E-07 | global batch size:    64 | lm loss: 1.219436E+01 | txt loss: 1.219436E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 451.32 | backward-compute: 384.72 | backward-params-all-reduce: 645.92 | backward-embedding-all-reduce: 0.09 | optimizer: 242.55 | optimizer-compute: 169.07 | batch-generator: 56.33
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       34/  500000 | consumed samples:         2176 | elapsed time per iteration (ms): 1734.2 | total FLOPS: 6.059219e+13 | learning rate: 2.267E-07 | global batch size:    64 | lm loss: 1.218549E+01 | txt loss: 1.218549E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 437.04 | backward-compute: 384.28 | backward-params-all-reduce: 659.13 | backward-embedding-all-reduce: 0.08 | optimizer: 243.03 | optimizer-compute: 169.48 | batch-generator: 40.47
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+vn025728: optimizing. Mem: 3.0425052493810654 GB
+vn025791:  iteration       35/  500000 | consumed samples:         2240 | elapsed time per iteration (ms): 1727.6 | total FLOPS: 6.082233e+13 | learning rate: 2.333E-07 | global batch size:    64 | lm loss: 1.218119E+01 | txt loss: 1.218119E+01 | loss scale: 1.0 | number of skipped iterations:   0 | number of nan iterations:   0 | allocated memory cur/max: 3.043 5.446 GB |
+vn025791: time (ms) | forward-compute: 436.32 | backward-compute: 384.42 | backward-params-all-reduce: 653.99 | backward-embedding-all-reduce: 0.08 | optimizer: 242.58 | optimizer-compute: 168.76 | batch-generator: 39.92
+vn025728: forwarding 0. Mem: 2.282 GB
+vn025728: backwarding 0. Mem: 5.446 GB
+[3384323 ## mn291: 4548 ## Sun Jan 30 05:34:18 2022]  jobstarter_sig_opt: sig-action is BKILL
+[3384323 ## 2022-01-30/05:34:18] receive request of kill job(bkill).
+[3384323 ## mn291: 4551 ## 2022-01-30/05:34:34] job_finished. use-time: 147.753951 (secs)
+dispatching ...
+Job 3384323 has been finished, exit reason: bkill.

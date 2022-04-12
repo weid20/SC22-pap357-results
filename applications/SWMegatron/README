@@ -1,0 +1,2 @@
+1. The cost per iteration of SWMegatron is marked by "elapsed time per iteration".
+2. The cost of MPI_Allreduce per iteration of SWMegatron is marked by "backward-params-all-reduce".
